@@ -3,5 +3,5 @@ resource "aws_shield_protection_group" "all" {
   aggregation         = var.aggregation
   pattern             = "ALL"
 
-  tags = local.tags
+  tags = var.tags
 }
