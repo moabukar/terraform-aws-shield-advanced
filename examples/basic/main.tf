@@ -16,6 +16,7 @@ module "shield" {
   #source  = "moabukar/shield-advanced/aws"
   source  = "../../"
   version = "0.0.1" 
+  name = "example_shield"
 
   # Pass in the name you wish to use for the resource, and the ARN of the resource to be protected.
   name_resource_arn_map = {

@@ -4,6 +4,10 @@ variable "name_resource_arn_map" {
   default     = {}
 }
 
+variable "name" {
+  description = "The name for Shield Protection"
+}
+
 variable "tags" {
   type        = map(string)
   description = "A map of tag names and values for tags to apply to all taggable resources created by the module. Default value is a blank map to allow for using Default Tags in the provider."
