@@ -19,9 +19,9 @@ module "shield" {
   # version = "0.0.1"
 
   # For local testing
-  source  = "../../"
+  source = "../../"
 
-  name    = "example_shield"
+  name = "example_shield"
 
   name_resource_arn_map = {
     "example_resource" = "arn:aws:ec2:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:eip-allocation/${aws_eip.example.id}"

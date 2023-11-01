@@ -28,7 +28,7 @@ variable "aggregation" {
   }
 }
 
-variable "name_resource_arn_map" {
-  type        = map(string)
-  description = "A map of names to resource ARNs to be protected by the Shield Advanced group."
-}
+# variable "name_resource_arn_map" {
+#   type        = map(string)
+#   description = "A map of names to resource ARNs to be protected by the Shield Advanced group."
+# }

@@ -1,4 +1,6 @@
 resource "aws_shield_protection_group" "arbitrary" {
+  depends_on          = [aws_shield_protection.shield]
+
   protection_group_id = var.name
   aggregation         = var.aggregation
   pattern             = "ARBITRARY"
@@ -6,3 +8,4 @@ resource "aws_shield_protection_group" "arbitrary" {
 
   tags = var.tags
 }
+
