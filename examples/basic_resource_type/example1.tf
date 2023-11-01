@@ -4,8 +4,8 @@ provider "aws" {
 
 # Only protecting Application Load Balancers
 module "shield_resource_type" {
-  source  = "../modules/group_resource_type"
-  version = "0.0.1" # Replace with appropriate version
+  source  = "../../modules/group_resource_type"
+  # version = "0.0.1"
 
   tags = {
     environment = "dev"

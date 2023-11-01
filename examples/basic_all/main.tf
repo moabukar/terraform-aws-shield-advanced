@@ -4,7 +4,7 @@ provider "aws" {
 
 module "shield-all" {
   source  = "../../modules/group_all"
-  version = "0.0.1"
+  # version = "0.0.1"
 
   tags = {
     example = "true"
