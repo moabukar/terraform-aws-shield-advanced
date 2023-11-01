@@ -13,7 +13,8 @@ resource "aws_eip" "example" {
 
 # Protect the EIP
 module "shield" {
-  source  = "moabukar/shield-advanced/aws"
+  #source  = "moabukar/shield-advanced/aws"
+  source  = "../../"
   version = "0.0.1" 
 
   # Pass in the name you wish to use for the resource, and the ARN of the resource to be protected.
