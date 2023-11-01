@@ -57,9 +57,7 @@ module "shield_advanced" {
 
 | Name | Type |
 |------|------|
-| [aws_shield_protection.cloudfront_shield_protection](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/shield_protection) | resource |
 | [aws_shield_protection.shield](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/shield_protection) | resource |
-| [aws_cloudfront_distribution.cloudfront_distribution](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/cloudfront_distribution) | data source |
 
 ## Inputs
 
@@ -75,7 +73,6 @@ module "shield_advanced" {
 | Name | Description |
 |------|-------------|
 | <a name="output_shield"></a> [shield](#output\_shield) | A map of properties for the created AWS Shield protection. |
-
 
 ## Local testing
 

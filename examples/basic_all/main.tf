@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-module "shield-all" {
+module "shield_all" {
   source = "../../modules/group_all"
   # version = "0.0.1"
 
@@ -11,6 +11,6 @@ module "shield-all" {
   }
 }
 
-output "shield-all" {
-  value = module.shield-all
+output "shield_all" {
+  value = module.shield_all
 }

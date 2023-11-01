@@ -14,7 +14,7 @@ resource "aws_eip" "example" {
 # Protect the EIP
 module "shield" {
   # Once published
-  # source  = "moabukar/shield-advanced/aws"
+  # source  = "moabukar/terraform-aws-shield-advanced/"
   # version = "0.0.1"
 
   # For local testing
