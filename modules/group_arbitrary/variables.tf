@@ -27,3 +27,8 @@ variable "aggregation" {
     error_message = "Valid values are limited to (SUM,MEAN,MAX)."
   }
 }
+
+variable "name_resource_arn_map" {
+  type        = map(string)
+  description = "A map of names to resource ARNs to be protected by the Shield Advanced group."
+}
