@@ -5,7 +5,7 @@ resource "aws_shield_protection_group" "cloudfront_distributions" {
   pattern             = "BY_RESOURCE_TYPE"
   resource_type       = "CLOUDFRONT_DISTRIBUTION"
 
-  tags = local.tags
+  tags = var.tags
 }
 
 resource "aws_shield_protection_group" "route53_hosted_zone" {
@@ -15,7 +15,7 @@ resource "aws_shield_protection_group" "route53_hosted_zone" {
   pattern             = "BY_RESOURCE_TYPE"
   resource_type       = "ROUTE_53_HOSTED_ZONE"
 
-  tags = local.tags
+  tags = var.tags
 }
 
 resource "aws_shield_protection_group" "global_accelerators" {
@@ -25,7 +25,7 @@ resource "aws_shield_protection_group" "global_accelerators" {
   pattern             = "BY_RESOURCE_TYPE"
   resource_type       = "GLOBAL_ACCELERATOR"
 
-  tags = local.tags
+  tags = var.tags
 }
 
 resource "aws_shield_protection_group" "application_load_balancers" {
@@ -35,7 +35,7 @@ resource "aws_shield_protection_group" "application_load_balancers" {
   pattern             = "BY_RESOURCE_TYPE"
   resource_type       = "APPLICATION_LOAD_BALANCER"
 
-  tags = local.tags
+  tags = var.tags
 }
 
 resource "aws_shield_protection_group" "classic_load_balancers" {
@@ -45,7 +45,7 @@ resource "aws_shield_protection_group" "classic_load_balancers" {
   pattern             = "BY_RESOURCE_TYPE"
   resource_type       = "CLASSIC_LOAD_BALANCER"
 
-  tags = local.tags
+  tags = var.tags
 }
 
 resource "aws_shield_protection_group" "elastic_ip_addresses" {
@@ -55,5 +55,5 @@ resource "aws_shield_protection_group" "elastic_ip_addresses" {
   pattern             = "BY_RESOURCE_TYPE"
   resource_type       = "ELASTIC_IP_ALLOCATION"
 
-  tags = local.tags
+  tags = var.tags
 }
