@@ -1,0 +1,17 @@
+# Terraform
+**/.terraform/*
+terraform.tfvars
+*.tfstate
+*.tfstate.*
+*.terraform
+
+# This would normally be checked in for locking down provider versions, but we don't want it saved for our tests.
+*.terraform.lock.hcl
+
+
+# Crash log files
+crash.log
+
+
+
+**.DS_Store
