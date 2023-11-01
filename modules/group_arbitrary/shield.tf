@@ -5,7 +5,6 @@ resource "aws_shield_protection_group" "arbitrary" {
   aggregation         = var.aggregation
   pattern             = "ARBITRARY"
   members             = var.members
-  # members = concat(var.members, var.cloudfront_arns)
 
   tags = var.tags
 }
