@@ -16,8 +16,8 @@ resource "aws_eip" "example" {
 module "shield" {
   #source  = "moabukar/shield-advanced/aws"
   source  = "../../"
-  version = "0.0.1" 
-  name = "example_shield"
+  version = "0.0.1"
+  name    = "example_shield"
 
   name_resource_arn_map = {
     "example_resource" = "arn:aws:ec2:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:eip-allocation/${aws_eip.example.id}"

@@ -12,10 +12,10 @@ module "shield_resource_type" {
     environment = "staging"
   }
   application_load_balancers = false
-  route53_hosted_zones     = false
-  global_accelerators      = false
-  classic_load_balancers   = false
-  elastic_ip_addresses     = false
+  route53_hosted_zones       = false
+  global_accelerators        = false
+  classic_load_balancers     = false
+  elastic_ip_addresses       = false
 }
 
 output "shield_resource_type" {

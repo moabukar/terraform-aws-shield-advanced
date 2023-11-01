@@ -32,7 +32,7 @@ output "shield" {
 # Add previously protected resources into group.
 module "shield_arbitrary" {
   source  = "../modules/group_resource_type"
-  version = "0.0.1" 
+  version = "0.0.1"
 
   name    = "shield_group"
   members = ["arn:aws:ec2:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:eip-allocation/${aws_eip.example.id}"]

@@ -16,8 +16,8 @@ resource "aws_eip" "example" {
 module "shield" {
   #source  = "moabukar/shield-advanced/aws"
   source  = "../../"
-  version = "0.0.1" 
-  name = "shield-advanced-cloudfront"
+  version = "0.0.1"
+  name    = "shield-advanced-cloudfront"
 
   name_resource_arn_map = {
     "cloudfront" = "arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5"
