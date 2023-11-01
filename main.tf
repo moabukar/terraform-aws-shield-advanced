@@ -3,5 +3,5 @@ resource "aws_shield_protection" "shield" {
   name         = each.key
   resource_arn = each.value
 
-  tags = local.tags
+  tags = var.tags
 }

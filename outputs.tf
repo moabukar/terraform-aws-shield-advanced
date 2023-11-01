@@ -1,4 +1,4 @@
 output "shield" {
-  value       = { for key, value in aws_shield_protection.shield : key => value }
+  value       = aws_shield_protection.shield
   description = "A map of properties for the created AWS Shield protection."
 }
