@@ -14,9 +14,13 @@ resource "aws_eip" "example" {
 
 # Protect the EIP
 module "shield" {
-  #source  = "moabukar/shield-advanced/aws"
-  source  = "../../"
+  # Once published
+  # source  = "moabukar/shield-advanced/aws"
   # version = "0.0.1"
+
+  # For local testing
+  source  = "../../"
+
   name    = "example_shield"
 
   name_resource_arn_map = {
