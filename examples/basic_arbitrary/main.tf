@@ -36,12 +36,14 @@ module "shield_protection_group" {
   name                = "shield_protection_group"
   aggregation         = "MEAN"
 
-  members = [
-    "arn:aws:ec2:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:eip-allocation/${aws_eip.example.id}",
-    "arn2",
-    "arn3",
-    ## Add rest of the CloudFront ARNs
-  ]
+  # members = [
+  #   "arn:aws:ec2:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:eip-allocation/${aws_eip.example.id}",
+  #   "arn2",
+  #   "arn3",
+  #   ## Add rest of the CloudFront ARNs
+  # ]
+
+  members = jsondecode(file("${path.module}/arns.json"))
   tags = {
     environment = "staging"
   }
@@ -51,6 +53,6 @@ output "shield" {
   value = module.shield
 }
 
-output "shield_arbitrary" {
-  value = module.shield_protection_group
-}
+# output "shield_arbitrary" {
+#   value = module.shield_protection_group
+# }

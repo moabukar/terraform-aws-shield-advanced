@@ -1,0 +1,5 @@
+[
+    "arn:aws:cloudfront::123456789012:distribution/ABC123XYZ",
+    "arn:aws:cloudfront::123456789012:distribution/DEF456UVW",
+    "arn:aws:cloudfront::123456789012:distribution/GHI789RST"
+]
