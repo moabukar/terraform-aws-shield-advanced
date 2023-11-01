@@ -16,7 +16,7 @@ resource "aws_eip" "example" {
 module "shield" {
   #source  = "moabukar/shield-advanced/aws"
   source  = "../../"
-  version = "0.0.1"
+  # version = "0.0.1"
   name    = "example_shield"
 
   name_resource_arn_map = {

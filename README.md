@@ -75,3 +75,18 @@ module "shield_advanced" {
 | Name | Description |
 |------|-------------|
 | <a name="output_shield"></a> [shield](#output\_shield) | A map of properties for the created AWS Shield protection. |
+
+
+## Local testing
+
+```bash
+
+export AWS_ACCESS_KEY_ID=<>
+export AWS_SECRET_ACCESS_KEY=<>
+export AWS_DEFAULT_REGION=<>
+
+terraform init
+terraform plan
+terraform apply
+
+```
