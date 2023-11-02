@@ -31,7 +31,7 @@ variable "aggregation" {
 variable "cloudfront_arns" {
   description = "List of CloudFront ARNs"
   type        = list(string)
-  default     = []  # You could also populate this default list with some starter ARNs if you want
+  default     = [] # You could also populate this default list with some starter ARNs if you want
 }
 
 # variable "name_resource_arn_map" {

@@ -5,7 +5,7 @@ provider "aws" {
 # Only protecting CloudFront Distributions
 
 module "shield_resource_type" {
-  source  = "../../modules/group_resource_type"
+  source = "../../modules/group_resource_type"
   # version = "0.0.1"
 
   tags = {

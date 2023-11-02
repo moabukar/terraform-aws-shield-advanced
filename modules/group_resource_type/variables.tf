@@ -123,3 +123,27 @@ variable "elastic_ip_addresses_aggregation" {
     error_message = "Valid values are limited to (SUM,MEAN,MAX)."
   }
 }
+
+variable "resources" {
+  type = map(bool)
+  default = {
+    "cloudfront_distributions"   = false
+    "route53_hosted_zones"       = false
+    "global_accelerators"        = false
+    "application_load_balancers" = false
+    "classic_load_balancers"     = false
+    "elastic_ip_addresses"       = false
+  }
+}
+
+variable "aggregations" {
+  type = map(string)
+  default = {
+    "cloudfront_distributions"   = "AGGREGATE"
+    "route53_hosted_zones"       = "AGGREGATE"
+    "global_accelerators"        = "AGGREGATE"
+    "application_load_balancers" = "AGGREGATE"
+    "classic_load_balancers"     = "AGGREGATE"
+    "elastic_ip_addresses"       = "AGGREGATE"
+  }
+}

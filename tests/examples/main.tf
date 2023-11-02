@@ -2,6 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
+
 data "aws_availability_zones" "available" {}
 data "aws_region" "current" {}
 data "aws_caller_identity" "current" {}
@@ -14,7 +15,7 @@ resource "aws_eip" "example" {
 # Protect the EIP
 module "shield" {
   # Once published
-  # source  = "moabukar/terraform-aws-shield-advanced/"
+  # source  = "moabukar/shield-advanced/aws"
   # version = "0.0.1"
 
   # For local testing
@@ -30,16 +31,6 @@ module "shield" {
   }
 }
 
-# Add previously protected resources into group.
-module "shield_protection_group" {
-  source      = "../../modules/group_arbitrary"
-  name        = "shield_protection_group"
-  aggregation = "MEAN"
-
-
-  members = jsondecode(file("${path.module}/arns.json"))
-  tags = {
-    environment = "staging"
-  }
+output "shield" {
+  value = module.shield
 }
-
